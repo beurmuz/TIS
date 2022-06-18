@@ -6,7 +6,7 @@
 |3|22.06.18|22.06.18|[03. Rendering Elements]()
 |4|22.06.18|22.06.18|[04. Components and Props]()
 |5|22.06.18|22.06.18|[05. State and LifeCycle](./section_05.md)
-|6|22.06.18|22.06.18|[06. Hooks]()
+|6|22.06.18|22.06.19|[06. Hooks](./section_06.md)
 |7|22.06.18|22.06.18|[07. Handling Events]()
 |8|22.06.18|22.06.18|[08. Conditional Rendering]()
 |9|22.06.18|22.06.18|[09. List and keys]()
