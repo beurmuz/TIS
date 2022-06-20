@@ -6,3 +6,4 @@
 |3|22.06.20|[SELECT_03](./select_03.txt)|O|X|
 |4|22.06.20|[SELECT_04](./select_04.txt)|O|X|
 |5|22.06.20|[SELECT_05](./select_05.txt)|O|X|
+|6|22.06.20|[SELECT_06](./select_06.txt)|O|X|
