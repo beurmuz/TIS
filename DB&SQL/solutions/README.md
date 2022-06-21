@@ -9,4 +9,4 @@
 |6|22.06.20|[SELECT_06](./select_06.txt)|O|X|
 |7|22.06.20|[SELECT_07](./select_07.txt)|O|X|
 |8|22.06.21|[SMM_01](./smm_01.txt)|O|X|
-
+|9|22.06.21|[SMM_02](./smm_02.txt)|O|X|
