@@ -8,7 +8,7 @@
 |5|22.06.18|22.06.18|[05. State and LifeCycle](./section_05.md)
 |6|22.06.18|22.06.21|[06. Hooks](./section_06.md)
 |7|22.06.21|22.06.21|[07. Handling Events](./section_07.md)
-|8|22.06.18|22.06.18|[08. Conditional Rendering]()
+|8|22.06.21|22.06.21|[08. Conditional Rendering](./section_08.md)
 |9|22.06.18|22.06.18|[09. List and keys]()
 |10|22.06.18|22.06.18|[10. Forms]()
 |11|22.06.18|22.06.18|[11. Lifting State up]()
