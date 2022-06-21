@@ -176,3 +176,42 @@ const refContainer = useRef(초깃값);
 - DOM 노드의 변화를 알기위한 가장 기초적인 방법
 - react는 ref가 다른 노드에 연결될 때마다 callback을 호출함
 - `useRef`는 데이터 변경 여부를 알려주지 않기때문에 `useCallback` Hook을 사용하는 callback ref 방식을 사용해야 자식 컴포넌트가 변경되었을 때 알림을 받을 수 있고, 이를 통해 다른 정보들을 업데이트 할 수 있음 
+
+# Hook의 규칙
+## 1. Hook은 무조건 최상위 레벨에서만 호출해야 함
+- 최상위 레벨: 리액트 함수 컴포넌트의 최상위 레벨을 의미함
+  - 반복문, 조건문, 중첩된 함수 안에서 Hook을 호출하면 안된다는 것
+- Hook은 컴포넌트가 렌더링될 때마다 매번 같은 순서로 호출되어야 함
+  ```jsx
+  // 잘못된 Hook 사용법
+  function MyComponent(props) {
+    const [name, setName] = useState('muz');
+    
+    if(name !== '') {
+      useEffect(() => {
+        ...
+      });
+    }
+
+    ...
+  }
+
+  ```
+## 2. 리액트 함수 컴포넌트에서만 Hook을 호출해야 함
+- javascript 코드에서 hook을 호출해서는 안됨 
+
+# Custom Hook 만들기
+## Custom hook을 만드는 이유?
+- 여러 컴포넌트에서 반복적으로 사용되는 로직을 hook으로 만들어 재사용하기 위함
+
+## Custom hook 추출하기
+- 이름이 꼭 use로 시작하고 내부에서 다른 Hook을 호출하는 하나의 자바스크립트 함수
+- custom hook의 매개변수나 return값은 개발자가 직접 정할 수 있음
+- 단순한 함수와 비슷하나 함수 이름을 use로 시작함으로써 해당 함수가 react hook임을 나타냄
+
+## Custom hook 사용하기
+- 여러 개의 컴포넌트에서 하나의 Custom Hook을 사용할 때, 컴포넌트 내부에 있는 모든 state와 effects는 전부 분리되어 있음
+- custom hook은 단순히 state와 연관되어 있는 로직을 재사용이 가능하게 만든것 뿐이라 state와 effect는 모두 분리되어있음
+- 커스텀 훅은 어떻게 state를 분리하는가?
+  - 각 Custom hook호출에 대해서 분리된 state를 얻게 됨
+- 각 커스텀 훅의 호출도 완전히 독립적임
