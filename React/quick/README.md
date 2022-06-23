@@ -12,5 +12,5 @@
 |9|22.06.21|22.06.21|[09. List and keys](./section_09.md)
 |10|22.06.21|22.06.23|[10. Forms](./section_10.md)
 |11|22.06.23|22.06.23|[11. Lifting State up](./section_11.md)
-|12|22.06.18|22.06.18|[12. Composition vs Inherutance]()
+|12|22.06.23|22.06.23|[12. Composition vs Inherutance](./section_12.md)
 |13|22.06.18|22.06.18|[13. Contenxt]()
