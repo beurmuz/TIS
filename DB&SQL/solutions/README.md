@@ -16,4 +16,5 @@
 |13|22.06.21|[ISNULL_02](./isnull_02.txt)|O|X|
 |14|22.06.21|[ISNULL_03](./isnull_03.txt)|O|X|
 |15|22.06.23|[GROUPBY_01](./groupby_01.txt)|O|X|
-|16|22.06.23|[GROUPBY_02](./groupby_02.txt)|O|O|
+|16|22.06.23|[GROUPBY_02](./groupby_02.txt)|O|✅|
+|17|22.06.23|[GROUPBY_03](./groupby_03.txt)|O|✅|
