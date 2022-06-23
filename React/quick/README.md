@@ -10,7 +10,7 @@
 |7|22.06.21|22.06.21|[07. Handling Events](./section_07.md)
 |8|22.06.21|22.06.21|[08. Conditional Rendering](./section_08.md)
 |9|22.06.21|22.06.21|[09. List and keys](./section_09.md)
-|10|22.06.21|22.06.21|[10. Forms]()
+|10|22.06.21|22.06.23|[10. Forms](./section_10.md)
 |11|22.06.18|22.06.18|[11. Lifting State up]()
 |12|22.06.18|22.06.18|[12. Composition vs Inherutance]()
 |13|22.06.18|22.06.18|[13. Contenxt]()
