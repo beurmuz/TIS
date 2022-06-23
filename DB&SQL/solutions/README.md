@@ -19,3 +19,4 @@
 |16|22.06.23|[GROUPBY_02](./groupby_02.txt)|O|✅|
 |17|22.06.23|[GROUPBY_03](./groupby_03.txt)|X|✅|
 |18|22.06.23|[GROUPBY_04](./groupby_04.txt)|X|✅|
+|19|22.06.23|[SD_01](./sd_01.txt)|O|X|
