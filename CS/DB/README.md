@@ -1,3 +1,4 @@
+# Database
 |Create|Update|Content|
 |:-:|:-:|:-:|
 |22.06.24|22.06.24|[DB, DB 종류](./database.md)
