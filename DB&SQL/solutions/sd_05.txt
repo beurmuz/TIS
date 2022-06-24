@@ -1,4 +1,0 @@
-SELECT ANIMAL_ID, NAME, DATE_FORMAT(DATETIME,'20%y-%m-%d') AS 날짜
-FROM ANIMAL_INS;
-
-cf. https://extbrain.tistory.com/60

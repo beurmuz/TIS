@@ -1,6 +1,0 @@
-// 상위 n개 데이터 구하기
-
-SELECT NAME
-FROM ANIMAL_INS
-ORDER BY DATETIME 
-LIMIT 1;
