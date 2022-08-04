@@ -14,3 +14,4 @@
 |22.06.23|22.06.23|[state 끌어올리기](./liftingstate.md)
 |22.06.23|22.06.23|[composition](./composition.md)
 |22.06.23|22.06.23|[Context](./context.md)
+|22.08.04|22.08.04|[리액트에서 자주 쓰는 if문 작성패턴](./if_inReact.md)|
