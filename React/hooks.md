@@ -177,6 +177,25 @@ const refContainer = useRef(초깃값);
 - react는 ref가 다른 노드에 연결될 때마다 callback을 호출함
 - `useRef`는 데이터 변경 여부를 알려주지 않기때문에 `useCallback` Hook을 사용하는 callback ref 방식을 사용해야 자식 컴포넌트가 변경되었을 때 알림을 받을 수 있고, 이를 통해 다른 정보들을 업데이트 할 수 있음 
 
+## 6. useReducer
+- useState대신 상태를 관리하는 또다른 방법
+- 컴포넌트의 상태 업데이트 로직을 컴포넌트에서 분리시킬 수 있음
+
+###  reducer
+- 현재 상태와 액션 객체를 파라미터로 받아와서 새로운 상태를 반환해주는 함수
+```js
+function reducer(state, action) {
+  // 새로운 상태를 만드는 로직
+  // const nextState = ...
+  return nextState;
+}
+```
+- reducer에서 반환하는 상태는 곧 컴포넌트가 지닐 새로운 상태가 됨
+- action은 업데이트를 위한 정보를 가지고 있으며, 주로 type값을 지닌 객체 형태로 사용함
+
+
+
+
 # Hook의 규칙
 ## 1. Hook은 무조건 최상위 레벨에서만 호출해야 함
 - 최상위 레벨: 리액트 함수 컴포넌트의 최상위 레벨을 의미함
