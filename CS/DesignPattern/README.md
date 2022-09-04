@@ -2,3 +2,4 @@
 |Create|Update|Content|
 |:-:|:-:|:--|
 |22.09.04|22.09.04|[Singleton pattern](./singletonPattern.md)|
+|22.09.04|22.09.04|[Factory Pattern](./factoryPattern.md)|
