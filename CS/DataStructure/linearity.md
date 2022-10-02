@@ -11,21 +11,21 @@
 
 ### 단방향 연결 리스트 (= 싱글 연결 리스트)
 
-<img src='./images/ds_01.JPG'>
+<img src='./images/linkedList_01.JPG'>
 
 - data와 next 포인터만 가짐
 - 한쪽 방향으로만 연결된 리스트
 
 ### 양방향 연결 리스트 (= 이중 연결 리스트)
 
-<img src='./images/ds_02.JPG'>
+<img src='./images/linkedList_02.JPG'>
 
 - data와 next 포인터, prev 포인터를 가짐
 - 양쪽 방향으로 연결된 리스트
 
 ### 환형 연결 리스트 (= 원형 이중 연결 리스트)
 
-<img src='./images/ds_03.JPG'>
+<img src='./images/linkedList_03.JPG'>
 
 - 양방향 연결 리스트와 같지만 마지막 노드의 next 포인터가 헤드 노드를 가리킴
 - 처음과 끝이 함께 연결되어 원형처럼 연결된 리스트
