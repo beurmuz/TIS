@@ -43,3 +43,13 @@
 > - 정적 타입 (Statically Typed)
 >   : 컴파일 시간에 타입이 결정 및 검사될 수 있는 경우 (코드 작성 시 타입을 명시해주어야 함)
 >   ex) Java, Kotlin, TS, Go, Swift, C 등
+
+## vscode에서 typescript 사용하기?
+
+```bash
+npm i -g -ts-node
+tsc 파일명.ts
+tsc 파일명.ts -w
+```
+
+- `-w`는 ts 파일을 수정할 때마다 변경된 내용이 자동으로 js파일에 적용되게끔 해주는 것이다.
