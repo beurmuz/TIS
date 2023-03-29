@@ -24,6 +24,8 @@
 
 ## 🌈 직접 구현해보는 Stack
 
+### 1. 싹다 직접 구현하기
+
 ```js
 class Node {
   constructor(value) {
@@ -36,10 +38,9 @@ class Stack {
   constructor() {
     this.top = null;
     this.bottom = null;
-    this.length = 0; // 아직 아무것도 넣지 않았으니
+    this.length = 0;
   }
 
-  // 가장 상단에 있는 노드를 return한다.
   peek() {
     return this.top;
   }
@@ -47,28 +48,23 @@ class Stack {
   push(value) {
     const newNode = new Node(value);
     if (this.length === 0) {
-      // 빈 스택이면
-      this.top = newNode; // top과 bottom 모두 nodeNode를 가리킨다.
+      this.top = newNode;
       this.bottom = newNode;
     } else {
-      // 빈 스택이 아닌 경우
-      const preNode = this.top; // 일단 직전 상단 값을 저장하고
-      this.top = newNode; // top에 새 노드를 저장한다.
-      this.top.next = preNode; // top.next에 preNode값을 저장한다.
+      const preNode = this.top;
+      this.top = newNode;
+      this.top.next = preNode;
     }
-    this.length++; // 1개를 추가했으니 길이를 늘려준다.
+    this.length++;
   }
 
   pop() {
     if (!this.top) {
-      // top이 없다는 것은 스택이 비었음을 의미한다.
       return null;
     }
     if (this.top === this.bottom) {
-      // 스택에 값이 1개 있는 경우이다.
       this.bottom = null;
     }
-    // ✅ 먼말이지?
     const removeNode = this.top;
     this.top = this.top.next;
     this.length--;
@@ -76,7 +72,7 @@ class Stack {
   }
 }
 
-const stack = new Stack(); // 스택 생성
+const stack = new Stack();
 stack.push("1");
 stack.push("2");
 stack.push("3");
@@ -87,11 +83,47 @@ stack.pop();
 console.log(stack.peek());
 ```
 
+### 2. 배열 이용하기
+
+```js
+class Stack {
+  constructor() {
+    this.arr = [];
+  }
+
+  peek() {
+    return this.arr[this.arr.length - 1];
+  }
+
+  push(value) {
+    this.arr.push(value);
+  }
+
+  pop() {
+    this.arr.pop();
+  }
+}
+
+const stack = new Stack(); // 스택 생성
+stack.push("1");
+stack.push("2");
+stack.push("3");
+console.log(stack);
+stack.pop();
+// stack.pop();
+console.log(stack);
+console.log(stack.peek());
+```
+
 # 2. 큐 (Queue)
 
-- FIFO (First In First Out), 가장 먼저 들어간 데이터가 가장 먼저 나오는 것
-- CPU 작업을 기다리는 프로세스나 스레드 행렬, 네트워크 접속을 기다리는 행렬, 너비 우선 탐색, 캐시 등에 사용됨
-- 삽입 및 삭제시 O(1) / 탐색시 O(n)
+- FIFO (First In First Out) - 가장 먼저 들어간 데이터가 가장 먼저 나온다.
+- 삽입과 삭제가 서로 다른 한군데에서 발생한다.
+  - CPU 스케줄링처럼 순차적으로 진행되어야 하는 경우, 네트워크 접속을 기다리는 경우, 너비 우선 탐색 (BFS), 캐시 등에 사용
+- 시간 복잡도
+  - 삽입(enqueue)/삭제(dequeue): O(1)
+  - 탐색: O(n)
+- 맨 앞: front, 맨 뒤: rear
 - `Array.unshift(element)`와 `Array.pop()`을 이용해 구현할 수 있음
 
   ```js
@@ -107,12 +139,66 @@ console.log(stack.peek());
   console.log(queue); // 3, 2
   ```
 
-> ✅ 스택, 큐를 사용할 땐 오버플로우와 언더플로우를 고려해야함
+## 🌈 직접 구현해보는 Queue
 
-### 오버플로우 (Overflow)
+```js
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
 
-- 특정 자료구조가 수용할 수 있는 저장 공간이 꽉찬 상태에서 삽입 연산 수행시 발생함
+class Queue {
+  constructor() {
+    this.front = null;
+    this.tail = null;
+    this.length = 0;
+  }
 
-### 언더플로우 (Underflow)
+  peek() {
+    return this.front;
+  }
 
-- 특정 자료구조에 데이터가 들어있지 않은 상태에서 삭제 연산 수행시 발생함
+  enqueue(value) {
+    const newNode = new Node(value);
+    if (this.length === 0) {
+      this.front = newNode;
+    } else {
+      this.tail.next = newNode;
+    }
+    this.tail = newNode;
+    this.length++;
+  }
+
+  dequeue() {
+    if (!this.front) {
+      return null;
+    }
+    if (this.front === this.tail) {
+      this.tail = null;
+    }
+    this.front = this.front.next;
+    this.length--;
+  }
+}
+
+const queue = new Queue();
+console.log(queue);
+queue.enqueue(1);
+queue.enqueue(2);
+queue.enqueue(3);
+console.log(queue);
+queue.dequeue();
+console.log(queue.peek());
+console.log(queue);
+```
+
+### 🚨 오버플로우 (Overflow) vs 언더플로우 (Underflow)
+
+스택, 큐를 사용할 때 고려해야한다.
+
+|           |                                                                           |
+| :-------: | :------------------------------------------------------------------------ |
+| Overflow  | 특정 자료구조가 수용할 수 있는 저장 공간이 꽉찬 상태에서 삽입 연산시 발생 |
+| Underflow | 특정 자료구조에 데이터가 들어있지 않은 상태에서 삭제 연산시 발생          |
